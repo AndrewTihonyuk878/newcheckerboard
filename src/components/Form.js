@@ -1,10 +1,8 @@
-import React from 'react';
-
 const Form = ({value, handleChange}) => {
 
     return (
         <div>
-            <form className='inp_config'ddd>
+            <form className='inp_config'>
                     <input
                     type='text'
                     name='name'

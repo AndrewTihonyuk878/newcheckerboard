@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './App.scss';
-import BoardComponents from './components/BoardComponen';
+import BoardComponents from './components/Board';
 import Form from './components/Form';
 import { makeBoardFromString } from './utils';
 
-
-import { START_BOARD_STR } from './components/BoardComponen';
-
+import { START_BOARD_STR } from './components/Board';
 
 function App() {
   const [value, setValue] = useState('')
@@ -16,6 +14,7 @@ function App() {
     setValue(START_BOARD_STR);
     const startBoard = makeBoardFromString(START_BOARD_STR);
     setBoard(startBoard);
+    console.log('app board', startBoard);
   }, []);
 
   const handleChange = ({ target }) => {
