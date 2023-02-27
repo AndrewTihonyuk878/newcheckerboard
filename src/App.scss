@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.board {
+  width: calc(64px * 8);
+  height: calc(64px * 8);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell_wrapper {
+  display: flex;
+}
+
+.cell {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inp_config {
+ input {
+  width: 507px;
+  height: 64px;
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+ }
+}
+
+.black {
+  background-color: #66a477;
+}
+
+.white {
+  background-color: #ece6e0;
+}
