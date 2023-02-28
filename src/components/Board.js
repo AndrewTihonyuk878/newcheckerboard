@@ -10,16 +10,16 @@ const Board = ({handleChange, value, setValue, board, setBoard}) => {
 
   return (
     <>
-        {Object.values(board).map((row, index) => (
+        {Object.values(board).map((rowBoardObj, indexObj) => (
           <RowBoard
             handleChange={handleChange}
             value={value}
             setValue={setValue}
             setBoard={setBoard}
             board={board} 
-            key={index} 
-            rowBoardIndex={index} 
-            rowBoard={Object.values(row)} />
+            key={indexObj} 
+            rowBoardIndex={indexObj} 
+            rowBoardArr={Object.values(rowBoardObj)} />
       ))}
     </>
   );

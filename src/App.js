@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.scss';
-import BoardComponents from './components/Board';
+import Board from './components/Board';
 import Form from './components/Form';
 import { makeBoardFromString } from './utils';
 
@@ -14,7 +14,6 @@ function App() {
     setValue(START_BOARD_STR);
     const startBoard = makeBoardFromString(START_BOARD_STR);
     setBoard(startBoard);
-    console.log('app board', startBoard);
   }, []);
 
   const handleChange = ({ target }) => {
@@ -27,7 +26,7 @@ function App() {
 
   return (
     <div className="App">
-      <BoardComponents 
+      <Board 
         value={value}
         setValue={setValue}
         board={board}
